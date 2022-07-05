@@ -3,6 +3,7 @@ body{
     font-family: 'Poppins';
     background-color: white;
     width: auto;
+    max-width: 375px;
 }
 
 .header{
@@ -252,8 +253,8 @@ nav{
         height: 320px;
         display: flex;
         overflow: auto;
-        overflow: hidden;
-        -webkit-overflow-scrolling: touch;
+        //overflow: hidden;
+        //webkit-overflow-scrolling: touch;
         scroll-snap-type: x mandatory;
         position: relative;  
         margin: 1em;

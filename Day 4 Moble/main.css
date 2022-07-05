@@ -3,6 +3,7 @@ body {
   font-family: 'Poppins';
   background-color: white;
   width: auto;
+  max-width: 375px;
 }
 
 .header {
@@ -266,8 +267,6 @@ nav ul a:hover {
   display: -ms-flexbox;
   display: flex;
   overflow: auto;
-  overflow: hidden;
-  -webkit-overflow-scrolling: touch;
   -ms-scroll-snap-type: x mandatory;
       scroll-snap-type: x mandatory;
   position: relative;
