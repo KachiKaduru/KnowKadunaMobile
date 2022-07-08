@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
 body {
   margin: 0;
   font-family: 'Poppins';
@@ -16,7 +17,7 @@ body {
   background-color: white;
   -webkit-box-shadow: 0px 4px 30px rgba(191, 191, 191, 0.25);
           box-shadow: 0px 4px 30px rgba(191, 191, 191, 0.25);
-  height: 60px;
+  height: 70px;
 }
 
 .header .container {
@@ -129,7 +130,7 @@ nav ul a:hover {
   text-decoration: none;
   background-color: black;
   color: white;
-  border: 2px solid #000000;
+  border: 1px solid #000000;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   text-align: center;
@@ -150,13 +151,9 @@ nav ul a:hover {
   width: 70%;
 }
 
-.categories-stn {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-.categories-stn h1 {
-  margin-left: 1.5em;
+.heading {
+  text-align: center;
+  margin: 12px auto;
 }
 
 .categories-stn .container {
@@ -166,7 +163,6 @@ nav ul a:hover {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  position: relative;
   color: white;
 }
 
@@ -184,7 +180,6 @@ nav ul a:hover {
 }
 
 .categories-stn .note, .categories-stn .note2, .categories-stn .note3 {
-  position: absolute;
   top: 5em;
   width: 200px;
   margin-left: 2.2em;
@@ -212,7 +207,6 @@ nav ul a:hover {
 }
 
 .categories-stn .note2, .categories-stn .note3 {
-  position: absolute;
   top: 1.5em;
   margin-left: 1.7em;
   width: 100px;
@@ -235,7 +229,6 @@ nav ul a:hover {
 }
 
 .categories-stn .right-column {
-  position: relative;
   top: 4px;
   right: 1em;
 }
@@ -256,24 +249,9 @@ nav ul a:hover {
           box-sizing: border-box;
 }
 
-.features-stn ul {
-  display: none;
-}
-
-.features-stn h1 {
-  margin-left: 1.5em;
-}
-
-.features-stn .slideshow-container {
-  width: auto;
-  height: 320px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  overflow: auto;
-  -ms-scroll-snap-type: x mandatory;
-      scroll-snap-type: x mandatory;
-  position: relative;
+.features-stn .container {
+  display: -ms-grid;
+  display: grid;
   margin: 1em;
 }
 
@@ -295,7 +273,6 @@ nav ul a:hover {
 }
 
 .features-stn .text {
-  position: absolute;
   top: 0;
   color: white;
   margin-left: 1em;
@@ -312,7 +289,6 @@ nav ul a:hover {
 }
 
 .features-stn .person {
-  position: absolute;
   top: 20em;
   color: white;
   font-size: 12px;
@@ -324,12 +300,7 @@ nav ul a:hover {
   width: 35px;
 }
 
-.recent-stn h1 {
-  margin-left: 1.5em;
-}
-
 .recent-stn .container {
-  position: relative;
   margin: 1em;
 }
 
@@ -344,7 +315,6 @@ nav ul a:hover {
   -webkit-overflow-scrolling: touch;
   -ms-scroll-snap-type: x mandatory;
       scroll-snap-type: x mandatory;
-  position: relative;
   margin: 0em;
 }
 
@@ -362,7 +332,6 @@ nav ul a:hover {
 }
 
 .recent-stn .recents {
-  position: absolute;
   top: 0;
 }
 
@@ -427,7 +396,6 @@ footer .container {
   background-color: #1A1A1A;
   background-image: url(imagebg-footer.png);
   color: white;
-  position: relative;
 }
 
 footer ul {
@@ -447,7 +415,6 @@ footer a:hover {
 footer .footer-logo {
   width: 200px;
   padding: 1em;
-  position: absolute;
   top: 11px;
 }
 

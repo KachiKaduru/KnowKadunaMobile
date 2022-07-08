@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
 body{
     margin: 0;
     font-family: 'Poppins';
@@ -14,7 +16,7 @@ body{
 .header{
     background-color: white;
     box-shadow: 0px 4px 30px rgba(191, 191, 191, 0.25);
-    height: 60px;
+    height: 70px;
 
     .container{
         display: grid;
@@ -124,7 +126,7 @@ nav{
         text-decoration: none;
         background-color: black;
         color: white;
-        border: 2px solid #000000;
+        border: 1px solid #000000;
         box-sizing: border-box;
         text-align: center;
         padding: 11px 30px;
@@ -145,17 +147,16 @@ nav{
     }
 }
 
+.heading{
+    text-align: center;
+    margin: 12px auto;
+}
+
 .categories-stn{
-    box-sizing: border-box;
-
-    h1{
-        margin-left: 1.5em;
-    }
-
     .container{
         display: flex;
         justify-content: space-between;
-        position: relative;
+        //position: relative;
         color: white;
     }
 
@@ -173,7 +174,7 @@ nav{
     }
 
     .note, .note2, .note3{
-        position: absolute;
+        //position: absolute;
         top: 5em;
         width: 200px;
         margin-left: 2.2em;
@@ -202,7 +203,7 @@ nav{
     }
 
     .note2, .note3{
-        position: absolute;
+        //position: absolute;
         top: 1.5em;
         margin-left: 1.7em;
         width: 100px;
@@ -225,7 +226,7 @@ nav{
     }
 
     .right-column{
-        position: relative;
+        //position: relative;
         top: 4px;
         right: 1em;
 
@@ -247,23 +248,15 @@ nav{
 .features-stn{
     box-sizing: border-box;
 
-    ul{
-        display: none;
-    }
-
-    h1{
-        margin-left: 1.5em;
-    }
-
-    .slideshow-container{
-        width: auto;
-        height: 320px;
-        display: flex;
-        overflow: auto;
+    .container{
+        //width: auto;
+        //height: 320px;
+        display: grid;
+        //overflow: auto;
         //overflow: hidden;
         //webkit-overflow-scrolling: touch;
-        scroll-snap-type: x mandatory;
-        position: relative;  
+        //scroll-snap-type: x mandatory;
+        //position: relative;  
         margin: 1em;
     }
 
@@ -286,7 +279,7 @@ nav{
     }
 
     .text{
-        position: absolute;
+        //position: absolute;
         top: 0;
         color: white;
         margin-left: 1em;
@@ -303,7 +296,7 @@ nav{
     }
 
     .person{
-        position: absolute;
+        //position: absolute;
         top: 20em;
         color: white;
         font-size: 12px;
@@ -318,12 +311,8 @@ nav{
 
 .recent-stn{
 
-    h1{
-        margin-left: 1.5em;
-    }
-
     .container{
-        position: relative;
+        //position: relative;
         margin: 1em;
     }
 
@@ -335,7 +324,7 @@ nav{
         overflow: hidden;
         -webkit-overflow-scrolling: touch;
         scroll-snap-type: x mandatory;
-        position: relative;  
+        //position: relative;  
         margin: 0em;
     }
 
@@ -352,7 +341,7 @@ nav{
     }
 
     .recents{
-        position: absolute;
+        //position: absolute;
         top: 0;
 
         h4, .owner, p{
@@ -421,7 +410,7 @@ footer{
         background-color: #1A1A1A;
         background-image: url(imagebg-footer.png);
         color: white;
-        position: relative;
+        //position: relative;
     }
 
     ul{
@@ -441,7 +430,7 @@ footer{
     .footer-logo{
         width: 200px;
         padding: 1em;
-        position: absolute;
+        //position: absolute;
         top: 11px;
        
         img{
