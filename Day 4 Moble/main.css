@@ -4,22 +4,28 @@ body {
   background-color: white;
   width: auto;
   max-width: 375px;
+  border: 2px solid green;
+}
+
+* {
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
 .header {
   background-color: white;
   -webkit-box-shadow: 0px 4px 30px rgba(191, 191, 191, 0.25);
           box-shadow: 0px 4px 30px rgba(191, 191, 191, 0.25);
-  height: 69px;
+  height: 60px;
 }
 
 .header .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 30px auto;
+      grid-template-columns: 30px auto;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
 .header .logo {
@@ -41,12 +47,9 @@ body {
 
 .header .mobile-menu {
   padding: 1em;
-  width: 30px;
+  width: 24px;
   height: 30px;
-}
-
-.header nav {
-  display: none;
+  cursor: pointer;
 }
 
 nav.menu-btn {
@@ -55,15 +58,16 @@ nav.menu-btn {
 
 nav {
   position: fixed;
-  z-index: 99;
-  width: 40%;
-  right: 0;
+  left: 0;
   top: 0;
+  z-index: 1;
+  width: 0;
   background: black;
   opacity: .95;
-  height: 90vh;
-  border-bottom-left-radius: 280px;
-  border-bottom-right-radius: 12px;
+  height: 100vh;
+  overflow-x: hidden;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 nav .mobile-exit {
@@ -105,14 +109,14 @@ nav ul a:hover {
 }
 
 .hero h1 {
-  font-size: 45px;
+  font-size: 40px;
   line-height: 60px;
   text-align: center;
 }
 
 .hero p {
   text-align: center;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 500;
 }
 

@@ -4,17 +4,23 @@ body{
     background-color: white;
     width: auto;
     max-width: 375px;
+    border: 2px solid green;
+}
+
+*{
+    transition: .3s;
 }
 
 .header{
     background-color: white;
     box-shadow: 0px 4px 30px rgba(191, 191, 191, 0.25);
-    height: 69px;
+    height: 60px;
 
     .container{
-        display: flex;
-        justify-content: space-between;
-        
+        display: grid;
+        grid-template-columns: 30px auto;
+        //justify-content: space-between;
+        align-content: center;
     }
 
     .logo{
@@ -36,12 +42,13 @@ body{
 
     .mobile-menu{
         padding: 1em;
-        width: 30px;
+        width: 24px;
         height: 30px;
+        cursor: pointer;
     }
 
     nav{
-        display: none;
+        //display: none;
     }
 }
 
@@ -51,15 +58,15 @@ nav.menu-btn{
 
 nav{
     position: fixed;
-    z-index: 99;
-    width: 40%;
-    right: 0;
+    left: 0;
     top: 0;
+    z-index: 1;
+    width: 0;
     background: black;
     opacity: .95;
-    height: 90vh;
-    border-bottom-left-radius: 280px;
-    border-bottom-right-radius: 12px;
+    height: 100vh;
+    overflow-x: hidden;
+    transition: .5s;
 
     .mobile-exit{
         height: 40px;
@@ -99,14 +106,14 @@ nav{
     }
 
     h1{
-        font-size: 45px;
+        font-size: 40px;
         line-height: 60px;
         text-align: center;
     }
 
     p{
         text-align: center;
-        font-size: 24px;
+        font-size: 20px;
         font-weight: 500;
     }
 
