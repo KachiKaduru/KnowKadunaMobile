@@ -21,7 +21,6 @@ body{
     .container{
         display: grid;
         grid-template-columns: 30px auto;
-        //justify-content: space-between;
         align-content: center;
     }
 
@@ -68,10 +67,10 @@ nav{
     opacity: .95;
     height: 100vh;
     overflow-x: hidden;
-    transition: .5s;
+    transition: .4s;
 
     .mobile-exit{
-        height: 40px;
+        height: 35px;
         filter: invert(1);
         display: block;
         float: right;
@@ -111,6 +110,8 @@ nav{
         font-size: 40px;
         line-height: 60px;
         text-align: center;
+        width: 350px;
+        margin: 2rem auto;
     }
 
     p{
@@ -121,13 +122,12 @@ nav{
 
     .know-kaduna-btn{
         width: fit-content;
-        margin: auto;
+        margin: 1.5em auto;
         display: block;
         text-decoration: none;
         background-color: black;
         color: white;
         border: 1px solid #000000;
-        box-sizing: border-box;
         text-align: center;
         padding: 11px 30px;
         font-weight: 700;
@@ -143,165 +143,131 @@ nav{
     .hero-img{
         display: block;
         margin: 2em auto;
-        width: 70%;
+        width: 80%;
     }
 }
 
 .heading{
-    text-align: center;
-    margin: 12px auto;
+    //text-align: center;
+    margin: 12px 1.4em;
 }
 
 .categories-stn{
+
     .container{
+       display: flex;
+       flex-direction: column;
+       gap: 2rem;
+       color: #FFFFFF;
+
+       .row{
         display: flex;
-        justify-content: space-between;
-        //position: relative;
-        color: white;
+        flex-direction: column;
+        gap: 2rem;
+       }
     }
 
-    img{
-        width: 90%;
-        height: 90%;
-        display: block;
-        margin: 1em;
-        border-radius: 10px;
+    .tab{
+        width: 20rem;
+        height: 20rem;
+        margin: auto;
+        border-radius: 12px;
+
+        .note{
+            h4{
+                font-size: 32px;
+                margin: 5rem 1em 0px 1em;
+            }
+    
+            p{
+                font-size: 16px;
+                margin: 1rem;
+            }
+        }
+    }
+
+    .food{
+        background: url("Rectangle 2 food.png");
+        background-size: cover;
+        background-position: 0em 0em;
+    }
+
+    .people{
+        background: url("Rectangle 2.2 people.png");
+        background-size: cover;
+        background-position: -11em;
+        //height: 12rem;
+        //width: 18.8rem;
+    }
+
+    .place{
+        background: url("Rectangle 2.3 history.png");
+        background-size: 32em;
+        background-position: 0em 0em;
+        //height: 12rem;
+        //width: 18.8rem;
     }
 
     a{
         text-decoration: none;
         color: white;
     }
-
-    .note, .note2, .note3{
-        //position: absolute;
-        top: 5em;
-        width: 200px;
-        margin-left: 2.2em;
-
-        h4{
-            font-size: 18px;
-            margin-bottom: 0;
-        }
-
-        p{
-            font-size: 12px;
-
-        }
-    }
-
-    .note{
-        top: 5em;
-
-        h4{
-            font-size: 24px;
-        }
-
-        p{
-            font-size: 13px;
-        }
-    }
-
-    .note2, .note3{
-        //position: absolute;
-        top: 1.5em;
-        margin-left: 1.7em;
-        width: 100px;
-
-        h4{
-            font-size: 14px;
-        }
-
-        p{
-            font-size: 9px;
-        }
-    }
-
-    .note3{
-        top: 9em;
-    }
-
-    .left-column{
-        margin: auto;
-    }
-
-    .right-column{
-        //position: relative;
-        top: 4px;
-        right: 1em;
-
-        img{
-            margin: auto;
-            margin: 1em;
-            margin-right: .1em;
-            line-height: -12px;
-        }
-
-        .imgg{
-            margin-top: -.4em; //reduce the margin-top
-        }
-    }
-
 }
 
 
 .features-stn{
-    box-sizing: border-box;
+    margin: 3rem auto;
 
     .container{
-        //width: auto;
-        //height: 320px;
-        display: grid;
-        //overflow: auto;
-        //overflow: hidden;
-        //webkit-overflow-scrolling: touch;
-        //scroll-snap-type: x mandatory;
-        //position: relative;  
         margin: 1em;
+        display: grid;
+        gap: 30px;
     }
 
     .slideshow{
-        width: auto;
         margin: auto;
-        flex-shrink: 0;
-        height: 100%;
+        width: 20rem;
+        height: 20rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
 
-        div{
-            scroll-snap-align: start;
-        }
+    .Welcome{
+        background: url("imgwelcome.png");
+        background-size: cover;
+    }
 
-        a{
-            img{
-                width: 290px;
-                height: 300px;
-            }
-        }
+    .Months{
+        background: url("img3months.png");
+        background-size: cover;
+    }
+
+    .Started{
+        background: url("imgstarted.png");
+        background-size: cover;
     }
 
     .text{
-        //position: absolute;
-        top: 0;
         color: white;
-        margin-left: 1em;
-        width: 300px;
+        margin-left: 1.4rem;
 
         h4{
-            font-size: 16px;
+            font-size: 18px;
+            margin-bottom: 10px;
         }
 
         p{
-            font-size: 12px;
-            margin-top: -1em;
+            font-size: 14px;
+            margin: 0px;
         }
     }
 
     .person{
-        //position: absolute;
-        top: 20em;
         color: white;
-        font-size: 12px;
-        width: 200px;
-        margin-left: 14em;
+        font-size: 14px;
+        margin: 1rem 3em;
+        text-align: right;
 
         img{
             width: 35px;
@@ -312,50 +278,37 @@ nav{
 .recent-stn{
 
     .container{
-        //position: relative;
         margin: 1em;
-    }
-
-    .slider{
-        width: auto;
-        height: 350px;
-        display: flex;
-        overflow: auto;
-        overflow: hidden;
-        -webkit-overflow-scrolling: touch;
-        scroll-snap-type: x mandatory;
-        //position: relative;  
-        margin: 0em;
+        display: grid;
     }
 
     .slides{
-        width: 320px;
-        margin: auto;
-        flex-shrink: 0;
-        height: 100%;
-        scroll-snap-align: start;
-        
-        img{
-            width: 300px;
-        }
+        width: 20rem;
+        height: 20rem;
+        margin: 1.4rem auto;
+        box-shadow: 0px 3.57994px 8.94985px rgba(111, 107, 107, 0.25);
+    }
+
+    .white{
+        background-color: white;
+    }
+    
+    .black{
+        background-color: #000000;
     }
 
     .recents{
-        //position: absolute;
-        top: 0;
-
-        h4, .owner, p{
-            color: black;
-            width: 290px;
-            margin-left: 1.2em;
-        }
-
-        .white{
-            color: white;
-        }
+        color: black;
+        width: 290px;
+        margin: auto 1.2rem;
 
         h4{
-            font-size: 14px;
+            font-size: 15px;
+        }
+
+        p{
+            font-size: 13px;
+            //width: 290px;
         }
 
         .owner{
@@ -364,9 +317,8 @@ nav{
             font-size: 13px;
         }
 
-        p{
-            font-size: 12px;
-            width: 260px;
+        .black{
+            color: white;
         }
     }
 
@@ -380,46 +332,49 @@ nav{
         color: black;
         font-weight: 600;
         font-size: 12px;
-        margin-left: 1.4em;
     }
 
     .view{
-        width: 100px;
         display: block;
-        margin:  -3em auto 4em;
+        width: auto;
+        margin: 1rem auto;
         text-decoration: none;
-        text-align: center;
         background-color: #000000;
         font-weight: 700;
         font-size: 14px;
         color: #ffffff;
         border: 2px solid black;
-        padding: 12.5px 44px 12px 44px;
+        padding: 12.5px 44px;
 
         &:hover{
             background: white;
             color: black;
-            
         }
     }
 }
 
 footer{
+    background-color: #1A1A1A;
+    background-image: url(imagebg-footer.png);
 
-    .container{
-        background-color: #1A1A1A;
-        background-image: url(imagebg-footer.png);
+    .container{ 
         color: white;
-        //position: relative;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        justify-content: space-between;
+        row-gap: 30px;
+        padding: 1em;
     }
 
-    ul{
+    li{
         list-style-type: none;
+        text-align: center;
     }
 
     a{
         text-decoration: none;
         color: white;
+        font-size: 14px;
 
         &:hover{
             color: grey;
@@ -428,81 +383,63 @@ footer{
     }
 
     .footer-logo{
-        width: 200px;
-        padding: 1em;
-        //position: absolute;
-        top: 11px;
-       
         img{
-            width: 40px;
-            height: 40px;
+            width: 30px;
+            height: 30px;
         }
 
         h4{
             display: inline;
             margin-left: 2px;
             position: relative;
-            top: -12px;
+            top: -9px;
         }
     }
 
     .footer-links{
-        width: fit-content;
-        margin: auto;
-        margin-top: 0em;
-        text-align: right;
-        padding: 1em;
-
         h4{
-            text-align: right;
             font-weight: 700;
-        }
-
-        ul{
-            li{
-                display: inline-flex;
-                font-size: 14px;
-                margin-left: 9px;
-                font-weight: 400;
-            }
+            margin: 0px;
+            text-align: center;
         }
     }
 
     .subscribe{
-        margin-top: -1em;
-        
-        form{
-            width: fit-content;
-            margin: auto;
-            padding-bottom: 1em;
-        }
-
         p{
             font-size: 14px;
             line-height: 18px;
+            color: #FFFFFF;
+            margin: 1em  2rem;
         }
 
-        .text{
-            width: 300px;
-            height: 30px;
+        form{
+            //width: fit-content;
+            margin: auto 2rem;
+            padding-bottom: 1em;
+            display: flex;
+        }
+
+        input[type=email] {
+            width: 100%;
+            max-width: 1440px;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
             background: #FFFFFF;
-            border: 1px solid #FFFFFF;
             font-family: 'Poppins';
-            padding-left: 1em;
-            border-right: 0px;
+            padding: 7px 1em;
+            border: 0px;
             font-weight: 400;
             font-size: 14px;
         }
 
-        .button{
+        input[type=button] {
+            //display: inline;
             background: linear-gradient(308.76deg, #FFC617 8.45%, #FDD456 120.11%);
-            height: 34.9px;
-            margin-left: -5px;
-            border: 1px solid #FDD456;
-            border-left: 0px;
+            border: none;
             font-family: 'Poppins';
             font-style: normal;
             font-weight: 500;
+            padding: 7px 1em;
             font-size: 14px;
         }
     }
