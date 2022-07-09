@@ -4,8 +4,6 @@ body {
   font-family: 'Poppins';
   background-color: white;
   width: auto;
-  max-width: 375px;
-  border: 2px solid green;
 }
 
 * {
