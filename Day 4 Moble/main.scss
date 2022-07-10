@@ -57,17 +57,21 @@ nav.menu-btn{
     display: block;
 }
 
+.croc, .search{
+    display: none;
+}
+
 nav{
     position: fixed;
     left: 0;
     top: 0;
-    z-index: 1;
+    z-index: 99;
     width: 0;
     background: black;
     opacity: .95;
     height: 100vh;
     overflow-x: hidden;
-    transition: .4s;
+    transition: .5s;
 
     .mobile-exit{
         height: 35px;
@@ -79,20 +83,25 @@ nav{
     }
 
     ul{
-        margin-top: 3em;
-        margin-left: -1em;
+        margin: 4em 0;
         list-style-type: none;
 
+        li{
+            width: 150px;
+            margin: 0;
+        }
+       
         a{
             text-decoration: none;
             color: white;
             display: block;
-            padding: .8em;
-            text-align: right;
+            padding: 1em 0;
+            transition: .1s;
 
             &:hover{
                 color: grey;
                 font-weight: 700;
+                font-size: 20px;
             }
         }
     }
