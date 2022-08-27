@@ -25,6 +25,7 @@ body {
 }
 
 header {
+  background-color: #FFFFFF;
   box-shadow: 0px 4px 30px rgba(191, 191, 191, 0.25);
 }
 header .container {
@@ -63,7 +64,7 @@ header nav {
 }
 
 nav {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   z-index: 999;
@@ -75,19 +76,24 @@ nav .exit-btn {
   width: 4rem;
   position: absolute;
   top: 1.6rem;
-  right: 1.3rem;
+  right: 2.5rem;
 }
 nav a {
   color: #FFFFFF;
+  font-size: 2rem;
 }
 nav a img {
   filter: invert(1);
   width: 3rem;
+  display: block;
 }
 nav a:hover {
   font-size: 2rem;
+  font-weight: 600;
+  color: #8E8E8E;
 }
 nav ul {
+  padding: 0 3rem;
   margin-top: 10rem;
   display: grid;
   gap: 2rem;
@@ -95,6 +101,7 @@ nav ul {
 
 main {
   background: url("../background-img.png");
+  background-attachment: fixed;
 }
 main .container {
   padding: 5rem 0px 7rem;
@@ -120,8 +127,13 @@ main .left-col button {
   background: #000000;
   color: #FFFFFF;
   font-size: 1.6rem;
-  font-weight: 700;
+  font-weight: 500;
   padding: 1.1rem 3rem;
+}
+main .left-col button:hover {
+  background-color: #FFFFFF;
+  color: #000000;
+  border: 1px solid #8E8E8E;
 }
 main img {
   width: 80%;
@@ -138,8 +150,8 @@ main img {
   gap: 3rem;
 }
 .categories-stn .categories {
-  aspect-ratio: 1.2/1;
-  height: 32vh;
+  aspect-ratio: 1.5/1;
+  height: 22rem;
   display: grid;
   align-content: flex-end;
   border-radius: 12px;
@@ -154,22 +166,25 @@ main img {
 }
 .categories-stn .categories h3 {
   font-size: 2.8rem;
-  font-weight: 700;
+  font-weight: 600;
 }
 .categories-stn .categories p {
   font-size: 1.6rem;
 }
 .categories-stn .food {
   background: url("../images/Rectangle 2 food.png");
-  background-size: contain;
+  background-size: 35rem;
+  background-position: 0rem -5rem;
 }
 .categories-stn .people {
   background: url("../images/Rectangle 2.2 people.png");
   background-size: cover;
-  background-position: -9rem 0rem;
+  background-position: 0rem 0rem;
 }
 .categories-stn .history {
   background: url("../images/Rectangle 2.3 history.png");
+  background-size: cover;
+  background-position: 0rem 0rem;
 }
 
 .features-stn {
@@ -187,7 +202,7 @@ main img {
   position: relative;
   margin: 0 0 4rem 3.5rem;
   aspect-ratio: 1/1;
-  width: 29rem;
+  width: 25rem;
   box-shadow: 0px 4px 11px rgba(50, 50, 50, 0.67);
   border-radius: 5px;
   display: grid;
@@ -233,17 +248,16 @@ main img {
   overflow: auto;
 }
 .recents-stn .container {
-  margin: auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   gap: 4rem;
   margin-left: 3.5rem;
 }
 .recents-stn .container .recents {
   display: grid;
-  gap: 0.4rem;
+  gap: 0.5rem;
   aspect-ratio: 1/1;
-  width: 300px;
+  width: 30rem;
   box-shadow: 0px 4px 11px rgba(50, 50, 50, 0.67);
   padding: 2rem 1rem;
   box-sizing: border-box;
@@ -261,9 +275,7 @@ main img {
   font-size: 1.5rem;
 }
 .recents-stn .container .recents button {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  justify-self: flex-start;
   background-color: #FFFFFF;
   padding: 0.8rem 2rem;
   font-family: "Poppins";
@@ -288,8 +300,11 @@ main img {
 }
 
 footer {
-  background-color: #1A1A1A;
+  background-image: url("../background-img.png");
+  background: #1A1A1A;
   color: #FFFFFF;
+  padding: 0 0 2rem;
+  box-sizing: border-box;
 }
 footer a {
   color: #FFFFFF;
@@ -298,6 +313,8 @@ footer .container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 3rem;
+  padding: 0 2rem;
+  box-sizing: border-box;
 }
 footer .container .logo {
   display: flex;
@@ -314,9 +331,269 @@ footer .container .logo p {
   line-height: 3rem;
 }
 footer .container .ul {
+  padding: 3rem 0 0;
+  box-sizing: border-box;
   display: grid;
-  gap: 1rem;
+  grid-template-columns: auto auto;
+  gap: 0.7rem 1.5rem;
+}
+footer .container .ul h4 {
+  grid-column: 1/-1;
 }
 footer .container .info {
   grid-column: 1/-1;
+  display: grid;
+  gap: 1rem;
+  box-sizing: border-box;
+}
+footer .container .info form {
+  display: flex;
+}
+footer .container .info form input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 1.4rem;
+  font-family: "Poppins";
+  padding: 0.7rem;
+}
+footer .container .info form .submit {
+  width: 50%;
+  font-size: 1.4rem;
+  font-weight: 600;
+  background: linear-gradient(308.76deg, #FFC617 8.45%, #FDD456 120.11%);
+}
+footer .media {
+  display: none;
+}
+
+@media only screen and (min-width: 767px) {
+  .menu-btn,
+.exit-btn {
+    display: none;
+  }
+  .headings {
+    font-size: 3.6rem;
+  }
+  header {
+    height: 7rem;
+  }
+  header .container {
+    padding: 2rem 1rem;
+    box-sizing: border-box;
+  }
+  header .container .logo img {
+    width: 2.8rem;
+  }
+  header .container .logo p {
+    font-size: 1.8rem;
+  }
+  header .container nav {
+    position: unset;
+    height: auto;
+    width: auto;
+    background: none;
+  }
+  header .container nav ul {
+    grid-template-columns: repeat(7, auto);
+    place-items: center;
+    margin: auto;
+    padding: 0;
+  }
+  header .container nav ul a {
+    font-size: 1.3rem;
+    color: #000000;
+    font-weight: 500;
+  }
+  header .container nav ul a img {
+    filter: none;
+    width: 2.4rem;
+  }
+  main .container {
+    grid-template-columns: auto 50%;
+    gap: 0px;
+  }
+  main .container .left-col {
+    align-self: flex-start;
+    padding: 2rem 0 0 4rem;
+    display: grid;
+    gap: 3rem;
+  }
+  main .container .left-col h1 {
+    font-size: 4.2rem;
+  }
+  main .container .left-col p {
+    font-size: 2rem;
+  }
+  main .container .left-col button {
+    margin: auto;
+    padding: 1.5rem 3.5rem;
+    font-size: 2rem;
+  }
+  .categories-stn .container {
+    place-items: unset;
+    grid-template-columns: 1.2fr 1fr;
+    grid-template-rows: repeat(2, 18rem);
+    gap: 1.5rem 3rem;
+    padding: 0 4rem;
+    box-sizing: border-box;
+  }
+  .categories-stn .container .categories {
+    aspect-ratio: unset;
+    height: auto;
+    box-sizing: unset;
+    border-radius: 0px;
+    padding: 0 2rem 5rem;
+  }
+  .categories-stn .container .food {
+    grid-row: 1/3;
+    background-size: cover;
+    background-position: 0rem 0rem;
+  }
+  .categories-stn .container .food h3 {
+    font-size: 3rem;
+  }
+  .categories-stn .container .food p {
+    font-size: 1.8rem;
+  }
+  .categories-stn .container .people,
+.categories-stn .container .history {
+    padding: 0 1rem 1rem;
+    background-size: cover;
+    background-position: 0rem 0rem;
+  }
+  .features-stn .container .features {
+    border-radius: 12px;
+    aspect-ratio: 1/1;
+    width: 30rem;
+    background-size: 50rem;
+    background-position: -4rem -10rem;
+  }
+  .features-stn .container .features h5 {
+    font-size: 2rem;
+  }
+  .features-stn .container .features p {
+    font-size: 1.6rem;
+  }
+  .features-stn .container .features .owner cite {
+    font-size: 1.8rem;
+  }
+  .features-stn .container .features .owner img {
+    width: 4rem;
+  }
+  .recents-stn .container .recents {
+    width: 30rem;
+  }
+  footer .container {
+    grid-template-columns: 0.5fr 1.5fr;
+  }
+  footer .container .ul {
+    grid-template-columns: repeat(5, auto);
+    margin: 0px;
+    gap: 0rem;
+  }
+  footer .container .ul h4 {
+    justify-self: flex-start;
+  }
+  footer .container .info form {
+    width: 80%;
+  }
+  footer .container .info form input {
+    font-size: 1.6rem;
+  }
+  footer .container .info form .submit {
+    width: 40%;
+  }
+}
+@media only screen and (min-width: 1080px) {
+  .headings {
+    font-size: 4.8rem;
+    margin-left: 6rem;
+  }
+  header .container .logo {
+    padding: 0 2rem;
+  }
+  header .container .logo img {
+    width: 4rem;
+  }
+  header .container .logo p {
+    font-size: 2.4rem;
+  }
+  header .container nav ul {
+    padding: 0 5rem 0 0;
+    gap: 3rem;
+  }
+  header .container nav ul a {
+    font-size: 1.8rem;
+  }
+  main .container .left-col {
+    padding: 4rem 0rem 0 8rem;
+    text-align: left;
+    gap: 4rem;
+  }
+  main .container .left-col h1 {
+    font-size: 5rem;
+    width: 50rem;
+  }
+  main .container .left-col p {
+    font-size: 2.4rem;
+  }
+  main .container .left-col button {
+    margin: unset;
+    justify-self: flex-start;
+    padding: 2.2rem 5rem;
+    font-size: 2.8rem;
+  }
+  main .container img {
+    width: 70%;
+  }
+  .categories-stn .container {
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: repeat(2, 28rem);
+    gap: 2rem 4rem;
+  }
+  .categories-stn .container .food h3 {
+    font-size: 5rem;
+  }
+  .categories-stn .container .food p {
+    font-size: 2.4rem;
+    width: 80%;
+  }
+  .features-stn .container .features {
+    width: 36rem;
+  }
+  .features-stn .container .features h5 {
+    font-size: 2.8rem;
+  }
+  .features-stn .container .features p {
+    font-size: 1.8rem;
+  }
+  .recents-stn .container .recents {
+    width: 38rem;
+    gap: 1.5rem;
+  }
+  .recents-stn .container .recents h4 {
+    font-size: 2.3rem;
+  }
+  .recents-stn .container .recents cite {
+    font-size: 1.8rem;
+  }
+  .recents-stn .container .recents p {
+    font-size: 2rem;
+  }
+  .recents-stn .container .recents button {
+    padding: 1rem 2.2rem;
+    font-size: 1.8rem;
+  }
+  footer .container {
+    grid-template-columns: auto auto 1fr;
+    grid-template-rows: unset;
+  }
+  footer .container .ul {
+    display: flex;
+    flex-direction: column;
+  }
+  footer .container .info {
+    grid-column: unset;
+  }
 }

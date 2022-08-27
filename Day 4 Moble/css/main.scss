@@ -25,9 +25,13 @@ body {
   margin: 0 0 0 4rem;
 }
 
+// main,
+// section {
+//   padding: 0 4rem;
+// }
+
 header {
-  //height: 11.3rem;
-  //background: red;
+  background-color: #FFFFFF;
   box-shadow: 0px 4px 30px rgba(191, 191, 191, 0.25);
 
   .container {
@@ -74,7 +78,7 @@ header {
 }
 
 nav {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   z-index: 999;
@@ -86,23 +90,28 @@ nav {
     width: 4rem;
     position: absolute;
     top: 1.6rem;
-    right: 1.3rem;
+    right: 2.5rem;
   }
 
   a {
     color: #FFFFFF;
+    font-size: 2rem;
 
     img {
       filter: invert(1);
       width: 3rem;
+      display: block;
     }
 
     &:hover {
       font-size: 2rem;
+      font-weight: 600;
+      color: #8E8E8E;
     }
   }
 
   ul {
+    padding: 0 3rem;
     margin-top: 10rem;
     display: grid;
     gap: 2rem;
@@ -111,6 +120,7 @@ nav {
 
 main {
   background: url("../background-img.png");
+  background-attachment: fixed;
 
   .container {
     padding: 5rem 0px 7rem;
@@ -139,8 +149,15 @@ main {
       background: #000000;
       color: #FFFFFF;
       font-size: 1.6rem;
-      font-weight: 700;
+      font-weight: 500;
       padding: 1.1rem 3rem;
+
+      &:hover {
+        background-color: #FFFFFF;
+        color: #000000;
+        border: 1px solid #8E8E8E;
+        //border-radius: 12px;
+      }
     }
   }
 
@@ -161,8 +178,8 @@ main {
   }
 
   .categories {
-    aspect-ratio: 1.2/1;
-    height: 32vh;
+    aspect-ratio: 1.5/1;
+    height: 22rem;
     display: grid;
     align-content: flex-end;
     border-radius: 12px;
@@ -178,7 +195,7 @@ main {
 
     h3 {
       font-size: 2.8rem;
-      font-weight: 700;
+      font-weight: 600;
     }
 
     p {
@@ -188,18 +205,21 @@ main {
 
   .food {
     background: url("../images/Rectangle\ 2\ food.png");
-    background-size: contain;
+    background-size: 35rem;
+    background-position: 0rem -5rem;
 
   }
 
   .people {
     background: url("../images/Rectangle\ 2.2\ people.png");
     background-size: cover;
-    background-position: -9rem 0rem;
+    background-position: 0rem 0rem;
   }
 
   .history {
     background: url("../images/Rectangle\ 2.3\ history.png");
+    background-size: cover;
+    background-position: 0rem 0rem;
   }
 }
 
@@ -219,7 +239,7 @@ main {
       position: relative;
       margin: 0 0 4rem 3.5rem;
       aspect-ratio: 1/1;
-      width: 29rem;
+      width: 25rem;
       box-shadow: 0px 4px 11px rgba(50, 50, 50, 0.67);
       border-radius: 5px;
       display: grid;
@@ -276,17 +296,17 @@ main {
 
   .container {
     //width: 90%;
-    margin: auto;
+    //margin: auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     gap: 4rem;
     margin-left: 3.5rem;
 
     .recents {
       display: grid;
-      gap: .4rem;
+      gap: .5rem;
       aspect-ratio: 1/1;
-      width: 300px;
+      width: 30rem;
       box-shadow: 0px 4px 11px rgba(50, 50, 50, 0.67);
       padding: 2rem 1rem;
       box-sizing: border-box;
@@ -308,7 +328,7 @@ main {
       }
 
       button {
-        width: fit-content;
+        justify-self: flex-start;
         background-color: #FFFFFF;
         padding: .8rem 2rem;
         font-family: 'Poppins';
@@ -338,12 +358,12 @@ main {
 }
 
 footer {
-  // display: flex;
-  // flex-direction: column;
-  // background: url("../background-img.png");
+  background-image: url("../background-img.png");
   // background-size: contain;
-  background-color: #1A1A1A;
+  background: #1A1A1A;
   color: #FFFFFF;
+  padding: 0 0 2rem;
+  box-sizing: border-box;
 
   a {
     color: #FFFFFF;
@@ -353,6 +373,8 @@ footer {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 3rem;
+    padding: 0 2rem;
+    box-sizing: border-box;
 
     .logo {
       display: flex;
@@ -372,13 +394,375 @@ footer {
     }
 
     .ul {
+      padding: 3rem 0 0;
+      box-sizing: border-box;
       display: grid;
-      gap: 1rem;
+      grid-template-columns: auto auto;
+      gap: .7rem 1.5rem;
+
+      h4 {
+        grid-column: 1/-1;
+        //grid-row: 1/-1;
+      }
     }
 
     .info {
       grid-column: 1/-1;
+      display: grid;
+      gap: 1rem;
+      box-sizing: border-box;
+
+      form {
+        display: flex;
+
+        input {
+          width: 100%;
+          border: none;
+          outline: none;
+          font-size: 1.4rem;
+          font-family: 'Poppins';
+          padding: .7rem;
+        }
+
+        .submit {
+          width: 50%;
+          font-size: 1.4rem;
+          font-weight: 600;
+          background: linear-gradient(308.76deg, #FFC617 8.45%, #FDD456 120.11%);
+
+        }
+      }
     }
   }
+
+  .media {
+    display: none;
+  }
+
+}
+
+@media only screen and (min-width: 767px) {
+
+  .menu-btn,
+  .exit-btn {
+    display: none;
+  }
+
+  .headings {
+    font-size: 3.6rem;
+  }
+
+  header {
+    height: 7rem;
+    //background-color: red;
+  }
+
+  header .container {
+    padding: 2rem 1rem;
+    box-sizing: border-box;
+
+    .logo {
+      img {
+        width: 2.8rem;
+      }
+
+      p {
+        font-size: 1.8rem;
+      }
+    }
+
+    nav {
+      position: unset;
+      height: auto;
+      width: auto;
+      background: none;
+
+      ul {
+        grid-template-columns: repeat(7, auto);
+        place-items: center;
+        margin: auto;
+        padding: 0;
+
+        a {
+          font-size: 1.3rem;
+          color: #000000;
+          font-weight: 500;
+
+          img {
+            filter: none;
+            width: 2.4rem;
+          }
+        }
+      }
+    }
+
+  }
+
+  main .container {
+    grid-template-columns: auto 50%;
+    gap: 0px;
+
+    .left-col {
+      align-self: flex-start;
+      padding: 2rem 0 0 4rem;
+      //text-align: left;
+      display: grid;
+      gap: 3rem;
+
+      h1 {
+        font-size: 4.2rem;
+      }
+
+      p {
+        font-size: 2rem;
+      }
+
+      button {
+        margin: auto;
+        padding: 1.5rem 3.5rem;
+        font-size: 2rem;
+      }
+    }
+  }
+
+  .categories-stn .container {
+    place-items: unset;
+    grid-template-columns: 1.2fr 1fr;
+    grid-template-rows: repeat(2, 18rem);
+    gap: 1.5rem 3rem;
+    padding: 0 4rem;
+    box-sizing: border-box;
+
+    .categories {
+      aspect-ratio: unset;
+      height: auto;
+      box-sizing: unset;
+      border-radius: 0px;
+      padding: 0 2rem 5rem;
+    }
+
+    .food {
+      grid-row: 1/3;
+      background-size: cover;
+      background-position: 0rem 0rem;
+
+      h3 {
+        font-size: 3rem;
+      }
+
+      p {
+        font-size: 1.8rem;
+      }
+    }
+
+    .people,
+    .history {
+      padding: 0 1rem 1rem;
+      background-size: cover;
+      background-position: 0rem 0rem;
+
+    }
+  }
+
+  .features-stn .container {
+    .features {
+      border-radius: 12px;
+      aspect-ratio: 1/1;
+      width: 30rem;
+      background-size: 50rem;
+      background-position: -4rem -10rem;
+
+      h5 {
+        font-size: 2rem;
+        //width: 23rem;
+      }
+
+      p {
+        font-size: 1.6rem;
+      }
+
+      .owner {
+        cite {
+          font-size: 1.8rem;
+        }
+
+        img {
+          width: 4rem;
+        }
+      }
+    }
+
+  }
+
+  .recents-stn .container {
+    .recents {
+      width: 30rem;
+    }
+  }
+
+  footer {
+    .container {
+      grid-template-columns: .5fr 1.5fr;
+
+      .ul {
+        grid-template-columns: repeat(5, auto);
+        margin: 0px;
+        gap: 0rem;
+
+        h4 {
+          justify-self: flex-start;
+        }
+      }
+
+      .info {
+        form {
+          width: 80%;
+
+          input {
+            font-size: 1.6rem;
+          }
+
+          .submit {
+            width: 40%;
+          }
+        }
+      }
+    }
+  }
+
+
+}
+
+@media only screen and (min-width: 1080px) {
+
+  .headings {
+    font-size: 4.8rem;
+    margin-left: 6rem;
+  }
+
+  header .container {
+    .logo {
+      padding: 0 2rem;
+
+      img {
+        width: 4rem;
+      }
+
+      p {
+        font-size: 2.4rem;
+      }
+    }
+
+    nav ul {
+      padding: 0 5rem 0 0;
+      gap: 3rem;
+
+      a {
+        font-size: 1.8rem;
+      }
+    }
+  }
+
+  main .container {
+
+    .left-col {
+      padding: 4rem 0rem 0 8rem;
+      text-align: left;
+      gap: 4rem;
+
+      h1 {
+        font-size: 5rem;
+        width: 50rem;
+      }
+
+      p {
+        font-size: 2.4rem;
+      }
+
+
+      button {
+        margin: unset;
+        justify-self: flex-start;
+        padding: 2.2rem 5rem;
+        font-size: 2.8rem;
+      }
+    }
+
+    img {
+      width: 70%;
+    }
+  }
+
+  .categories-stn .container {
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: repeat(2, 28rem);
+    gap: 2rem 4rem;
+
+    .food {
+      h3 {
+        font-size: 5rem;
+      }
+
+      p {
+        font-size: 2.4rem;
+        width: 80%;
+      }
+    }
+  }
+
+  .features-stn .container {
+    .features {
+      width: 36rem;
+
+      h5 {
+        font-size: 2.8rem;
+      }
+
+      p {
+        font-size: 1.8rem;
+      }
+    }
+  }
+
+  .recents-stn .container {
+    .recents {
+      width: 38rem;
+      gap: 1.5rem;
+
+      h4 {
+        font-size: 2.3rem;
+      }
+
+      cite {
+        font-size: 1.8rem;
+      }
+
+      p {
+        font-size: 2rem;
+      }
+
+      button {
+        padding: 1rem 2.2rem;
+        font-size: 1.8rem;
+      }
+    }
+  }
+
+  footer .container {
+    grid-template-columns: auto auto 1fr;
+    grid-template-rows: unset;
+
+    .ul {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .info {
+      grid-column: unset;
+    }
+
+  }
+
+
 
 }
